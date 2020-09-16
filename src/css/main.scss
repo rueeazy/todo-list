@@ -6,6 +6,7 @@
 $light-blue: #F0F8FF;
 $roboto: 'Roboto', sans-serif;
 $comforta: 'Comfortaa', cursive;
+$primary-blue: #3796FD;
 
 html {
     height: 100%;
@@ -25,7 +26,6 @@ body {
 
 //Menu Container 
 .menu-container {
-    border: 1px solid red;
     background-color: $light-blue;
     display: grid;
     grid-template-columns: 1fr;
@@ -35,7 +35,7 @@ body {
 
     .menu-header {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         font-family: $comforta;
         font-weight: bold;
         font-size: 2rem;
@@ -64,20 +64,57 @@ body {
         color: white;
         border: none;
         cursor: pointer;
+
+        .plusButton {
+            margin-right: .5rem;
+        }
     }
 
     .menu-lists {
         width: 80%;
+
+        .menuListTitle {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #3796FD;
+            border-bottom: 2px solid grey;
+            font-family: $comforta;
+            font-weight: bold;
+            font-size: 2rem;
+            text-align: center;
+            padding-bottom: .75rem;
+        }
+
+        .addCircle {
+            cursor: pointer;
+        }
     }
 
-    .menuListTitle {
-        color: #3796FD;
-        border-bottom: 2px solid grey;
-        font-family: $comforta;
-        font-weight: bold;
-        font-size: 2rem;
-        text-align: center;
-        padding-bottom: .75rem;
+    // Individual Project List Header Styling
+
+    ul.projects {
+        margin-top: 1rem;
+        font-size: 1.1rem;
+
+        li.projectItem {
+            display: flex;
+            justify-content: space-between;
+            margin: .75rem 0rem;
+            cursor: pointer;
+        }
+
+        p.projectCount {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: .75rem;
+            height: 1rem;
+            width: 1rem;
+            background-color: rgba(55, 150, 253, .5);
+            border-radius: 3rem;
+            color: black;   
+        }
     }
 }
 
@@ -106,7 +143,7 @@ body {
 
 .cardHeader {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     color: #3796FD;
@@ -173,6 +210,112 @@ body {
             width: 85%;
             left: 1.5rem;
         }
+    }
+}
+
+// Dynamic Webpages
+
+//Add To Do Form
+.addTaskForm {
+    display: none;
+    position: absolute;
+    height: 100%;
+    box-sizing: border-box;
+
+    ::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+    }
+    
+    .form-container {
+        margin-top: 6rem;
+        margin-left: 3rem;
+        background-color: rgba(	240, 248, 255, 1);
+        border: 1px solid #3796FD;
+        box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+        border-radius: 2rem;
+        height: 40%;
+        width: 25rem;
+        padding: 2rem;
+        overflow-y: scroll;
+
+
+        h1 {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #3796FD;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+            button {
+                background-color: #3796FD; 
+                color: white;
+                border: none;
+                border-radius: 3px;
+                padding: .3rem;
+            }
+        }
+    }
+
+    &.show {
+        display: block;
+    }
+}
+
+//Menu Create Task Form
+.menuAddTaskForm {
+    display: none;
+    position: absolute;
+    height: 100%;
+    box-sizing: border-box;
+
+    ::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+    }
+    
+    .form-container {
+        margin-top: 6rem;
+        margin-left: 3rem;
+        background-color: rgba(	240, 248, 255, 1);
+        border: 1px solid #3796FD;
+        box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+        border-radius: 2rem;
+        height: 40%;
+        width: 25rem;
+        padding: 2rem;
+        overflow-y: scroll;
+
+
+        h1 {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #3796FD;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+            button {
+                background-color: #3796FD; 
+                color: white;
+                border: none;
+                border-radius: 3px;
+                padding: .3rem;
+            }
+        }
+    }
+
+    &.show {
+        display: block;
     }
 }
 

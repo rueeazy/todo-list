@@ -16,7 +16,6 @@ body {
   height: 100%; }
 
 .menu-container {
-  border: 1px solid red;
   background-color: #F0F8FF;
   display: grid;
   grid-template-columns: 1fr;
@@ -25,7 +24,7 @@ body {
   padding-top: 5rem; }
   .menu-container .menu-header {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     font-family: "Comfortaa", cursive;
     font-weight: bold;
     font-size: 2rem;
@@ -50,16 +49,41 @@ body {
     color: white;
     border: none;
     cursor: pointer; }
+    .menu-container .menu-button .plusButton {
+      margin-right: .5rem; }
   .menu-container .menu-lists {
     width: 80%; }
-  .menu-container .menuListTitle {
-    color: #3796FD;
-    border-bottom: 2px solid grey;
-    font-family: "Comfortaa", cursive;
-    font-weight: bold;
-    font-size: 2rem;
-    text-align: center;
-    padding-bottom: .75rem; }
+    .menu-container .menu-lists .menuListTitle {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #3796FD;
+      border-bottom: 2px solid grey;
+      font-family: "Comfortaa", cursive;
+      font-weight: bold;
+      font-size: 2rem;
+      text-align: center;
+      padding-bottom: .75rem; }
+    .menu-container .menu-lists .addCircle {
+      cursor: pointer; }
+  .menu-container ul.projects {
+    margin-top: 1rem;
+    font-size: 1.1rem; }
+    .menu-container ul.projects li.projectItem {
+      display: flex;
+      justify-content: space-between;
+      margin: .75rem 0rem;
+      cursor: pointer; }
+    .menu-container ul.projects p.projectCount {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: .75rem;
+      height: 1rem;
+      width: 1rem;
+      background-color: rgba(55, 150, 253, 0.5);
+      border-radius: 3rem;
+      color: black; }
 
 .tasks-container {
   display: flex;
@@ -82,7 +106,7 @@ body {
 
 .cardHeader {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   color: #3796FD;
@@ -130,5 +154,79 @@ body {
       content: "";
       width: 85%;
       left: 1.5rem; }
+
+.addTaskForm {
+  display: none;
+  position: absolute;
+  height: 100%;
+  box-sizing: border-box; }
+  .addTaskForm ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; }
+  .addTaskForm .form-container {
+    margin-top: 6rem;
+    margin-left: 3rem;
+    background-color: aliceblue;
+    border: 1px solid #3796FD;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 2rem;
+    height: 40%;
+    width: 25rem;
+    padding: 2rem;
+    overflow-y: scroll; }
+    .addTaskForm .form-container h1 {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #3796FD; }
+    .addTaskForm .form-container form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      .addTaskForm .form-container form button {
+        background-color: #3796FD;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        padding: .3rem; }
+  .addTaskForm.show {
+    display: block; }
+
+.menuAddTaskForm {
+  display: none;
+  position: absolute;
+  height: 100%;
+  box-sizing: border-box; }
+  .menuAddTaskForm ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; }
+  .menuAddTaskForm .form-container {
+    margin-top: 6rem;
+    margin-left: 3rem;
+    background-color: aliceblue;
+    border: 1px solid #3796FD;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 2rem;
+    height: 40%;
+    width: 25rem;
+    padding: 2rem;
+    overflow-y: scroll; }
+    .menuAddTaskForm .form-container h1 {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #3796FD; }
+    .menuAddTaskForm .form-container form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      .menuAddTaskForm .form-container form button {
+        background-color: #3796FD;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        padding: .3rem; }
+  .menuAddTaskForm.show {
+    display: block; }
 
 /*# sourceMappingURL=main.css.map */
