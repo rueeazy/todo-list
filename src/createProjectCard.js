@@ -17,6 +17,13 @@ const createList = (() => {
         e.preventDefault();
         let listTitle = document.getElementById('listTitle').value;
         addNewList(listTitle);
+        addToDirectory(listTitle);
+    }
+
+    const addToDirectory = (listTitle) => {
+        let project = document.querySelector('#projects').lastChild;
+        project.firstChild.innerText = `${listTitle}`; 
+        project.lastChild.innerText = "0"; 
     }
 
     const addNewList = (listTitle) => {

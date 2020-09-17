@@ -10,6 +10,7 @@ const projectCard = (() => {
             projectCount = existingCards.length;
         }
         createCardContainer(projectCount);
+        createDirectoryNode(projectCount);
     }
 
     const createCardContainer = (projectCount) => {
@@ -44,6 +45,26 @@ const projectCard = (() => {
         ul.classList.add('carditems');
         card.appendChild(ul);
     }
+
+    const createDirectoryNode = (projectCount) => {
+        let currentProjects = document.querySelector('#projects');
+        let li = document.createElement('li');
+        li.classList.add('projectItem');
+        li.dataset.projectItem = `${projectCount}`;
+        currentProjects.appendChild(li);
+        addListNodeContents(li);  
+    }
+
+    const addListNodeContents = (li) => {
+        let para1 = document.createElement("p");
+        para1.classList.add('projectName');
+        let para2 = document.createElement("p");
+        para2.dataset.count=""
+        para2.classList.add('projectCount');
+        li.appendChild(para1);
+        li.appendChild(para2);
+    }
+
     return { createCard }
 })(); 
 
