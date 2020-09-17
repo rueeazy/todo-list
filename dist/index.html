@@ -11,7 +11,7 @@
 </head>
 <body>
     <div id="content" class="grid main-container">
-        <div class="menu-container col-3">
+        <div class="menu-container col-3" id="menu-container">
             <div id ="menu-header" class="menu-header">
                 <h1>Todo List</h1>
                 <i id="hamburgerButton" class="fas fa-bars menu-icon"></i>
@@ -30,81 +30,27 @@
                         <p class="projectName">Personal</p>
                         <p data-count class="projectCount">3</p>
                     </li>
-                    <li data-projectItem="1" class="projectItem">
-                        <p class="projectName">Groceries</p>
-                        <p data-count class="projectCount">2</p>
-                    </li>
-                    <li data-projectItem="2" class="projectItem">
-                        <p class="projectName">Work</p>
-                        <p data-count class="projectCount">0</p>
-                    </li>
                 </ul>
             </div>
         </div>
-        <div class="tasks-container col-9">
-            <div class="project-card" data-card="0" data-projectItem="0">
-                <div id="cardHeader" class="cardHeader">
-                    <h3>Personal</h3>
-                    <i class="fas fa-plus-circle fa-2x cardAddIcon" id="cardAddIcon"></i>
-                </div>
-                <ul id="cardItems" class="cardItems">
-                    <li  class="completed" data-listItem="0">
-                        <input type="checkbox" id="item0" value="incomplete" class="checkbox">
-                        <p>Get Groceries</p>
-                        <i class="fas fa-times-circle itemDelete" id="itemDelete"></i>
-                    </li>
-                    <li data-listItem="1">
-                        <input type="checkbox" id="item1" value="incomplete" class="checkbox">
-                        <p>item 2</p>
-                        <i class="fas fa-times-circle itemDelete" id="itemDelete"></i>
-                    </li>
-                    <li data-listItem="2">
-                        <input type="checkbox" id="item2" value="incomplete" class="checkbox">
-                        <p>item 3</p>
-                        <i class="fas fa-times-circle itemDelete" id="itemDelete"></i>
-                    </li>
-                </ul> 
-            </div>
-            <div class="project-card" data-card="1" data-projectItem="1">
-                <div id="cardHeader" class="cardHeader">
-                    <h3>Personal</h3>
-                    <i class="fas fa-plus-circle fa-2x cardAddIcon"></i>
-                </div>
-                <ul id="cardItems" class="cardItems">
-                    <li  class="completed" data-listItem="0">
-                        <input type="checkbox" id="item1" value="incomplete" class="checkbox">
-                        <p>Get Groceries</p>
-                        <i class="fas fa-times-circle itemDelete"></i>
-                    </li>
-                    <li data-listItem="1">
-                        <input type="checkbox" id="item3" value="incomplete" class="checkbox">
-                        <p>item 2</p>
-                        <i class="fas fa-times-circle itemDelete"></i>
-                    </li>
-                    <li data-listItem="2">
-                        <input type="checkbox" id="item2" value="incomplete" class="checkbox">
-                        <p>item 3</p>
-                        <i class="fas fa-times-circle itemDelete"></i>
-                    </li>
-                </ul> 
-            </div>
+        <div class="tasks-container col-9" id="tasks-container">
             <div class="addTaskForm" id="addTaskForm">
                 <div class="form-container">
                     <h1>Add Task</h1>
                     <form>
                         <label for="title">Title:</label>
-                        <input type="text" id="title" name="title"><br>
+                        <input type="text" id="askTitle" name="title"><br>
                         <label for="priority">Priority:</label>
-                        <select id="priority" name="priorityList">
+                        <select id="askPriority" name="priorityList">
                             <option value="low">Low</option>
                             <option value="medium">Medium</option>
                             <option value="high">High</option>
                         </select><br>
-                        <label for="dueDate">Due Date:</label>
-                        <input type="date" id="dueDate" name="dueDate"><br>
+                        <label for="askDueDate">Due Date:</label>
+                        <input type="date" id="askDueDate" name="dueDate"><br>
                         <label for="note">Note:</label>
-                        <textarea id="note" cols="20" rows="5"></textarea><br>
-                        <button id="addTask">Add Task</button>
+                        <textarea id="askNote" cols="20" rows="5"></textarea><br>
+                        <button id="askAddTask">Add Task</button>
                     </form>
                 </div>
             </div>
@@ -131,6 +77,62 @@
                         <button id="addTask">Add Task</button>
                     </form>
                 </div>
+            </div>
+            <div class="createListForm" id="createListForm">
+                <div class="form-container">
+                    <h1>New List</h1>
+                    <form>
+                        <label for="list">List Title:</label>
+                        <input type="text" id="listTitle" name="listTitle"><br>
+                        <button id="addList">Add List</button>
+                    </form>
+                </div>
+            </div>
+            <div class="project-card" data-card="0" data-projectItem="0">
+                <div id="cardHeader" class="cardHeader">
+                    <h3>Personal</h3>
+                    <i class="fas fa-plus-circle fa-2x cardAddIcon" id="cardAddIcon"></i>
+                </div>
+                <ul id="cardItems" class="cardItems">
+                    <li  class="completed" data-listItem="0">
+                        <input type="checkbox" id="item0" value="incomplete" class="checkbox">
+                        <p>Get Groceries</p>
+                        <i class="fas fa-times-circle itemDelete" id="itemDelete"></i>
+                    </li>
+                    <li data-listItem="1">
+                        <input type="checkbox" id="item1" value="incomplete" class="checkbox">
+                        <p>item 2</p>
+                        <i class="fas fa-times-circle itemDelete" id="itemDelete"></i>
+                    </li>
+                    <li data-listItem="2">
+                        <input type="checkbox" id="item2" value="incomplete" class="checkbox">
+                        <p>item 3</p>
+                        <i class="fas fa-times-circle itemDelete" id="itemDelete"></i>
+                    </li>
+                </ul> 
+            </div>
+            <div class="project-card" data-card="1" data-projectItem="1">
+                <div id="cardHeader" class="cardHeader">
+                    <h3>Groceries</h3>
+                    <i class="fas fa-plus-circle fa-2x cardAddIcon" id="cardAddIcon"></i>
+                </div>
+                <ul id="cardItems" class="cardItems">
+                    <li  class="completed" data-listItem="0">
+                        <input type="checkbox" id="item0" value="incomplete" class="checkbox">
+                        <p>Get Groceries</p>
+                        <i class="fas fa-times-circle itemDelete" id="itemDelete"></i>
+                    </li>
+                    <li data-listItem="1">
+                        <input type="checkbox" id="item1" value="incomplete" class="checkbox">
+                        <p>item 2</p>
+                        <i class="fas fa-times-circle itemDelete" id="itemDelete"></i>
+                    </li>
+                    <li data-listItem="2">
+                        <input type="checkbox" id="item2" value="incomplete" class="checkbox">
+                        <p>item 3</p>
+                        <i class="fas fa-times-circle itemDelete" id="itemDelete"></i>
+                    </li>
+                </ul> 
             </div>
         </div>
     </div>

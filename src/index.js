@@ -1,6 +1,14 @@
 import Sortable from "sortablejs";
+import { projectCard } from './createProjectCardDOM';
+import { createList } from './createProjectCard';
 
-var el = document.getElementById("cardItems");
-let sortable = new Sortable(el, {
-    animation: 150
-})
+createList.addNewList;
+
+// var el = document.getElementById("cardItems");
+// let sortable = new Sortable(el, {
+//     animation: 150
+// });
+
+
+
+
