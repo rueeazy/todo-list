@@ -1,5 +1,5 @@
 
-const newTaskDom = (() => {
+const createTaskDom = (() => {
 
     const createTaskElements = (parentCard, title) => {
         let ul = parentCard.lastElementChild;
@@ -48,4 +48,4 @@ const newTaskDom = (() => {
     return { createTaskElements }
 })();
 
-export { newTaskDom }
+export { createTaskDom }
