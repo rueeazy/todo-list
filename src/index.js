@@ -1,5 +1,4 @@
 import Sortable from "sortablejs";
-import { projectCard } from './createProjectCardDOM';
 import { createList } from './createProjectCard';
 
 createList.addNewList;

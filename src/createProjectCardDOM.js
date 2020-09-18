@@ -42,7 +42,7 @@ const projectCard = (() => {
     const createListContainer = (card) => {
         let ul = document.createElement('ul');
         ul.id = 'cardItems';
-        ul.classList.add('carditems');
+        ul.classList.add('cardItems');
         card.appendChild(ul);
     }
 
@@ -68,4 +68,4 @@ const projectCard = (() => {
     return { createCard }
 })(); 
 
-export { projectCard, existingCards }
+export { projectCard, existingCards, }

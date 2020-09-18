@@ -1,4 +1,5 @@
 import { projectCard, existingCards } from './createProjectCardDOM';
+import { createTask } from './createTask';
 const addProjectButton = document.querySelector('#addProjectButton');
 const listForm = document.querySelector('#createListForm');
 
@@ -31,6 +32,7 @@ const createList = (() => {
         let newCard = existingCards[existingCards.length - 1];
         let projectTitle = newCard.querySelector("h3");
         projectTitle.innerText = `${listTitle}`;
+        createTask.addTaskBtnListener();
         hideForm();
     }
 
