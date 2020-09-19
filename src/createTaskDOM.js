@@ -1,4 +1,4 @@
-
+import { completeTask } from './completeTask';
 const createTaskDom = (() => {
 
     const createTaskElements = (parentCard, title) => {
@@ -20,6 +20,8 @@ const createTaskDom = (() => {
         addTextContainer(li, title);   
         addHiddenDelete(li); 
         ul.appendChild(li);
+        completeTask.addListeners(li);
+        // updateTask.addListener(li);
     }
 
     const addCheckBox = (li) => {
