@@ -54,6 +54,26 @@
                     </form>
                 </div>
             </div>
+            <div class="viewTaskForm" id="viewTaskForm">
+                <div class="form-container">
+                    <h1>Task</h1>
+                    <form>
+                        <label for="title">Title:</label>
+                        <input type="text" id="viewTitle" name="title"><br>
+                        <label for="priority">Priority:</label>
+                        <select id="viewPriority" name="priorityList">
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                        </select><br>
+                        <label for="viewDueDate">Due Date:</label>
+                        <input type="date" id="viewDueDate" name="dueDate"><br>
+                        <label for="note">Note:</label>
+                        <textarea id="viewNote" cols="20" rows="5"></textarea><br>
+                        <button id="return">Return</button>
+                    </form>
+                </div>
+            </div>
             <div class="menuAddTaskForm" id="menuAddTaskForm">
                 <div class="form-container">
                     <h1>Add Task</h1>

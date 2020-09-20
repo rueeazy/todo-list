@@ -1,4 +1,4 @@
-import { Task } from './taskFactory';
+import { Task, existingTasks } from './taskFactory';
 import { createTaskDom } from './createTaskDOM';
 import { create } from 'sortablejs';
 
@@ -46,6 +46,7 @@ const createTask = (() => {
 
     const addTaskToList = (newTask) => {
         createTaskDom.createTaskElements(parentCard, newTask.getTitle());
+        existingTasks.push(newTask);
     }
 
     return { getInputs, addTaskBtnListener, submitTaskFormListener }
