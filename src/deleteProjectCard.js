@@ -1,4 +1,5 @@
 import { completeTask } from './completeTask';
+import { menuCreate } from './menuCreateTask';
 const deleteProject = (() => {
 
     const globalListener = () => {
@@ -17,6 +18,7 @@ const deleteProject = (() => {
         deleteTaskObjects(listItems);
         deleteCard(parentCard);
         findMenuReference(parentCardTitle);
+        
     }
 
     const deleteTaskObjects = (listItems) => {
@@ -28,6 +30,8 @@ const deleteProject = (() => {
 
     const deleteCard = (parentCard) => {
         parentCard.remove();
+        let cards = document.querySelectorAll('[data-card]');
+        if(cards.length < 1) { menuCreate.hideCreateTask()}
     }
 
     const findMenuReference = (parentCardTitle) => {

@@ -87,7 +87,7 @@ const menuCreate = (()=> {
         projectCount.innerText = tasks.length;
     }
 
-    return { globalListener }
+    return { globalListener, hideCreateTask }
 
 })();
 

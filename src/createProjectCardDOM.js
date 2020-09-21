@@ -11,7 +11,7 @@ const projectCard = (() => {
             projectCount = existingCards.length;
         }
         createCardContainer(projectCount);
-        createDirectoryNode(projectCount);
+        createDirectoryNode(projectCount);  
     }
 
     const createCardContainer = (projectCount) => {
