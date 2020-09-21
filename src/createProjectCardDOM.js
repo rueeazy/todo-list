@@ -1,3 +1,4 @@
+import { listCard } from './menuProjectCard';
 const taskContainer = document.querySelector('#tasks-container');
 const existingCards = document.getElementsByClassName('project-card');
 
@@ -52,7 +53,8 @@ const projectCard = (() => {
         li.classList.add('projectItem');
         li.dataset.projectItem = `${projectCount}`;
         currentProjects.appendChild(li);
-        addListNodeContents(li);  
+        addListNodeContents(li);
+        listCard.globalListener();  
     }
 
     const addListNodeContents = (li) => {

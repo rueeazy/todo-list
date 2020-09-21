@@ -103,6 +103,8 @@ body {
   background-color: #F0F8FF;
   margin: 0 2rem 0 2rem;
   padding: 3rem; }
+  .project-card.hide {
+    display: none; }
 
 .cardHeader {
   display: flex;

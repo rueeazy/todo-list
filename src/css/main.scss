@@ -139,6 +139,10 @@ body {
     background-color: $light-blue;
     margin: 0 2rem 0 2rem;
     padding: 3rem;
+
+    &.hide {
+        display: none; 
+    }
 }
 
 .cardHeader {

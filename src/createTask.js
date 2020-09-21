@@ -1,6 +1,7 @@
 import { Task, existingTasks } from './taskFactory';
 import { createTaskDom } from './createTaskDOM';
 import { create } from 'sortablejs';
+import { updateTask } from './updateTask';
 
 
 const createTask = (() => {
@@ -47,6 +48,15 @@ const createTask = (() => {
     const addTaskToList = (newTask) => {
         createTaskDom.createTaskElements(parentCard, newTask.getTitle());
         existingTasks.push(newTask);
+        updateMenuCount() 
+    }
+
+    const updateMenuCount = () => {
+        let tasks = parentCard.querySelectorAll('[data-listitem]');
+        let menuItems = Array.from(document.querySelectorAll('.projectItem'));
+        let project = menuItems.filter(item => item.dataset.projectItem == parentCard.dataset.projectItem)[0];
+        let projectCount = project.lastElementChild
+        projectCount.innerText = tasks.length;
     }
 
     return { getInputs, addTaskBtnListener, submitTaskFormListener }
