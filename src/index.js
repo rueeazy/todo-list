@@ -11,10 +11,10 @@ createTask.submitTaskFormListener();
 updateTask.globalListener();
 listCard.globalListener();
 
-// var el = document.getElementById("cardItems");
-// let sortable = new Sortable(el, {
-//     animation: 150
-// });
+var el = document.getElementById("cardItems");
+let sortable = new Sortable(el, {
+    animation: 150
+});
 
 
 

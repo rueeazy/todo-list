@@ -52,6 +52,17 @@ const updateTask = (() => {
         linkedTask.taskPriority = taskForm.querySelector('#viewPriority').value;
         linkedTask.task8DueDate = taskForm.querySelector('#viewDueDate').value;
         linkedTask.taskNote = taskForm.querySelector('#viewNote').value;
+        updatePriority(linkedTask.taskPriority);
+    }
+
+    const updatePriority = (priority) => {
+        if(priority == 'low') {
+            workingLi.classList.add('low');
+        } else if(priority == 'medium') {
+            workingLi.classList.add('medium');
+        } else {
+            workingLi.classList.add('high');
+        }
     }
 
     const returnToList = (linkedTask) => {

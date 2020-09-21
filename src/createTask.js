@@ -46,7 +46,7 @@ const createTask = (() => {
     }
 
     const addTaskToList = (newTask) => {
-        createTaskDom.createTaskElements(parentCard, newTask.getTitle());
+        createTaskDom.createTaskElements(parentCard, newTask);
         existingTasks.push(newTask);
         updateMenuCount() 
     }

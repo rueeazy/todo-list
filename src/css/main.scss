@@ -131,7 +131,7 @@ body {
 // Project Card
 .project-card {
     position: relative;
-    height: 40rem;
+    height: 35rem;
     min-width: 25rem;
     max-width: 25rem;
     border-radius: 15px;
@@ -183,10 +183,21 @@ body {
         border-radius: 3px;
         cursor: pointer;
 
+        &.low p {
+            border-bottom: 2px solid green;
+        }
+
+        &.medium p {
+            border-bottom: 2px solid #F0E68C;
+        }
+
+        &.high p {
+            border-bottom: 2px solid red;
+        }
+
         p {
             flex-basis: 85%;
             font-size: 1.1rem;
-            border-bottom: 2px solid transparent;
         }
 
         .itemDelete {
