@@ -24,6 +24,7 @@ body {
   padding-top: 5rem; }
   .menu-container .menu-header {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     font-family: "Comfortaa", cursive;
     font-weight: bold;
@@ -34,8 +35,6 @@ body {
     color: #3796FD;
     width: 80%;
     border-bottom: 2px solid grey; }
-    .menu-container .menu-header .menu-icon {
-      cursor: pointer; }
   .menu-container .menu-button {
     display: flex;
     align-items: center;
@@ -51,6 +50,8 @@ body {
     cursor: pointer; }
     .menu-container .menu-button .plusButton {
       margin-right: .5rem; }
+    .menu-container .menu-button.hide {
+      display: none; }
   .menu-container .menu-lists {
     width: 80%; }
     .menu-container .menu-lists .menuListTitle {
@@ -351,5 +352,9 @@ body {
         padding: .3rem; }
   .createListForm.show {
     display: block; }
+
+@media only screen and (max-width: 992px) {
+  div.menu-container h1 {
+    font-size: 1.5rem; } }
 
 /*# sourceMappingURL=main.css.map */
