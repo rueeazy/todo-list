@@ -121,6 +121,9 @@ body {
     color: black; }
   .cardHeader .cardAddIcon {
     cursor: pointer; }
+  .cardHeader .trashIcon {
+    margin-right: .75rem;
+    cursor: pointer; }
 
 .cardItems {
   width: 95%;
