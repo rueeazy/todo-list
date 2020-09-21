@@ -108,6 +108,29 @@
                     </form>
                 </div>
             </div>
+            <div class="menuTaskForm" id="menuTaskForm">
+                <div class="form-container">
+                    <h1>Add Task</h1>
+                    <form>
+                        <label for="project">Project:</label>
+                        <select id="projectList" name="projectList">
+                        </select><br>
+                        <label for="title">Title:</label>
+                        <input type="text" id="menuTitle" name="title"><br>
+                        <label for="priority">Priority:</label>
+                        <select id="menuPriority" name="priorityList">
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                        </select><br>
+                        <label for="askDueDate">Due Date:</label>
+                        <input type="date" id="menuDueDate" name="dueDate"><br>
+                        <label for="note">Note:</label>
+                        <textarea id="menuNote" cols="20" rows="5"></textarea><br>
+                        <button id="menuAddTask">Add Task</button>
+                    </form>
+                </div>
+            </div>
             <div class="project-card" data-card="0" data-project-item="0">
                 <div id="cardHeader" class="cardHeader">
                     <h3>Personal</h3>
