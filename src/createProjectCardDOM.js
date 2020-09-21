@@ -34,10 +34,16 @@ const projectCard = (() => {
 
     const cardHeaderContents = (header) => {
         let title = document.createElement('h3');
+        let div = document.createElement('div');
+        div.classList.add('icons');
         let button = document.createElement('i');
-        button.classList.add('fa', 'fa-plus-circle', 'fa-2x', 'cardAddIcon');
+        let button2 = document.createElement('i');
+        button.classList.add('far', 'fa-trash-alt', 'fa-2x', 'trashIcon');
+        button2.classList.add('fa', 'fa-plus-circle', 'fa-2x', 'cardAddIcon');
+        div.appendChild(button);
+        div.appendChild(button2);
         header.appendChild(title);
-        header.appendChild(button);
+        header.appendChild(div);
     }
 
     const createListContainer = (card) => {

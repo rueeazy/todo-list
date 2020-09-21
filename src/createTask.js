@@ -21,7 +21,7 @@ const createTask = (() => {
     }
 
     function showTaskForm(e) {
-        parentCard = e.target.parentElement.parentElement;
+        parentCard = e.target.closest('[data-card]');
         taskForm.classList.add('show');
     }
 

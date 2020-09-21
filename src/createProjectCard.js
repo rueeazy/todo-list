@@ -1,5 +1,6 @@
 import { projectCard, existingCards } from './createProjectCardDOM';
 import { createTask } from './createTask';
+import { deleteProject } from './deleteProjectCard';
 
 const addProjectButton = document.querySelector('#addProjectButton');
 const listForm = document.querySelector('#createListForm');
@@ -34,6 +35,7 @@ const createList = (() => {
         let projectTitle = newCard.querySelector("h3");
         projectTitle.innerText = `${listTitle}`;
         createTask.addTaskBtnListener();
+        deleteProject.globalListener();
         hideForm();
         if(document.querySelector('#menu-button').classList.contains('hide')) { document.querySelector('#menu-button').classList.remove('hide') }
     }

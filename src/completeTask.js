@@ -45,7 +45,7 @@ const completeTask = (() => {
         projectCount.innerText = tasks.length - 1;
     }
 
-    return { addListeners }
+    return { addListeners, linkTaskObject, deleteTaskObject }
 })();
 
 export { completeTask }
