@@ -1,4 +1,6 @@
 import { completeTaskDOM } from './completeTaskDOM';
+import { existingTasks } from "./taskFactory";
+
 const completeTask = (() => {
     let parentCard;
 
@@ -13,9 +15,26 @@ const completeTask = (() => {
         let deleteButton = li.querySelector('#itemDelete');
         deleteButton.addEventListener('click', function(e) {
             parentCard = this.parentElement.parentElement.parentElement;
+            let task = this.parentElement;
+            let title = task.querySelector('p').innerText;
             updateMenuCount();
+            linkTaskObject(title);
             completeTaskDOM.deleteTask(li);
         })
+    }
+
+    const linkTaskObject = (title) => {
+        let linkedTask;
+        for(let task of existingTasks) {
+            if(task.taskTitle == title) {
+                linkedTask = task;
+            }
+        } 
+        deleteTaskObject(linkedTask);
+    }
+
+    const deleteTaskObject = (linkedTask) => {
+        existingTasks.splice(linkedTask, 1);
     }
 
     const updateMenuCount = () => {
