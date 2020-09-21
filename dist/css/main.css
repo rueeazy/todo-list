@@ -276,6 +276,44 @@ body {
   .viewTaskForm.show {
     display: block; }
 
+.menuTaskForm {
+  z-index: 999;
+  display: none;
+  position: absolute;
+  height: 100%;
+  box-sizing: border-box; }
+  .menuTaskForm ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; }
+  .menuTaskForm .form-container {
+    margin-top: 6rem;
+    margin-left: 3rem;
+    background-color: aliceblue;
+    border: 1px solid #3796FD;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 2rem;
+    height: 40%;
+    width: 25rem;
+    padding: 2rem;
+    overflow-y: scroll; }
+    .menuTaskForm .form-container h1 {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #3796FD; }
+    .menuTaskForm .form-container form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      .menuTaskForm .form-container form button {
+        background-color: #3796FD;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        padding: .3rem; }
+  .menuTaskForm.show {
+    display: block; }
+
 .createListForm {
   z-index: 999;
   display: none;

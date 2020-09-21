@@ -1,6 +1,5 @@
 import { Task, existingTasks } from './taskFactory';
 import { createTaskDom } from './createTaskDOM';
-import { create } from 'sortablejs';
 import { updateTask } from './updateTask';
 
 
