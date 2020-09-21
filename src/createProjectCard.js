@@ -35,6 +35,7 @@ const createList = (() => {
         projectTitle.innerText = `${listTitle}`;
         createTask.addTaskBtnListener();
         hideForm();
+        if(document.querySelector('#menu-button').classList.contains('hide')) { document.querySelector('#menu-button').classList.remove('hide') }
     }
 
     const hideForm = () => {

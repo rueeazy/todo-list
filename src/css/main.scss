@@ -35,6 +35,7 @@ body {
 
     .menu-header {
         display: flex;
+        align-items: center;
         justify-content: space-between;
         font-family: $comforta;
         font-weight: bold;
@@ -45,10 +46,6 @@ body {
         color: #3796FD;
         width: 80%;
         border-bottom: 2px solid grey;
-
-        .menu-icon {
-            cursor: pointer;
-        }
     }
 
     .menu-button {
@@ -67,6 +64,10 @@ body {
 
         .plusButton {
             margin-right: .5rem;
+        }
+
+        &.hide {
+            display: none;
         }
     }
 
@@ -493,6 +494,15 @@ body {
     &.show {
         display: block;
     }
+}
+
+@media only screen and (max-width: 992px) {
+    div.menu-container {
+
+        h1 {
+            font-size: 1.5rem;
+        }
+    } 
 }
 
 

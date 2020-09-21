@@ -10,6 +10,11 @@ const menuCreate = (()=> {
     const globalListener = () => {
         document.querySelector('#menu-button').addEventListener('click', showForm);
         taskForm.querySelector('#menuAddTask').addEventListener('click', getInputs);
+        if(Array.from(taskCards).length < 1) { hideCreateTask() }
+    }
+
+    const hideCreateTask = () => {
+        document.querySelector('#menu-button').classList.add('hide');
     }
 
     const showForm = (e) => {
