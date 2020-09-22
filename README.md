@@ -3,6 +3,9 @@ The Odin Project -- Javascript To-do list
 
 This project is part of The Odin Project's Curriculum. [https://www.theodinproject.com/courses/javascript/lessons/todo-list?ref=lnav]
 
+
+The Final Project Can be viewed here [https://rueeazy.github.io/todo-list/].
+
 Features:
 - create new lists
 - edit lists
@@ -20,7 +23,7 @@ Built with:
 Libraries used:
 - Sortable JS
 
-Feature Updates:
+V2 Feature Updates:
 - Create local storage.
 
-Will need to create Project Factory to create Project objects that has individual tasks that belongs to it. And then with each update, will save Projects to local storage and load it up whenever needed.
+Will need to create Project Factory to create Project objects that has many tasks that belong to it.
