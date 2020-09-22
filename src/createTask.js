@@ -1,7 +1,6 @@
+import Sortable from "sortablejs";
 import { Task, existingTasks } from './taskFactory';
 import { createTaskDom } from './createTaskDOM';
-import { updateTask } from './updateTask';
-
 
 const createTask = (() => {
     let parentCard;
@@ -32,6 +31,9 @@ const createTask = (() => {
         let taskNote = currentForm.querySelector('#askNote').value;
         createTaskObject(taskTitle, taskPriority, taskDate, taskNote);
         hideTaskForm(currentForm);
+        // Add sortable library so tasks can be manipulated
+        let el = document.getElementById("cardItems");
+        let sortable = Sortable.create(el, { animation: 150 });
     }
 
     const createTaskObject = (taskTitle, taskPriority, taskDate, taskNote) => {
@@ -55,7 +57,7 @@ const createTask = (() => {
         let menuItems = Array.from(document.querySelectorAll('.projectItem'));
         let project = menuItems.filter(item => item.dataset.projectItem == parentCard.dataset.projectItem)[0];
         let projectCount = project.lastElementChild
-        projectCount.innerText = tasks.length;
+        projectCount.textContent = tasks.length;
     }
 
     return { getInputs, addTaskBtnListener, submitTaskFormListener }
