@@ -503,16 +503,88 @@ body {
     div.menu-container {
 
         h1 {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
         }
     } 
 }
 
+//Media Queries
+@media only screen and (max-width: 600px) {
 
+    .col-3 {
+        grid-column-end: span 4; 
+    }
 
+    .col-9 {
+        grid-column-end: span 8;
+    }
 
+    .fa-plus-circle:before {
+        font-size: 1.5rem;
+    }
 
+    .menu-container {
+        justify-items: flex-start;
+        margin-left: .5rem;
+        padding-top: 2rem;
 
+        h1 {
+            font-size: 1.1rem;
+        }
 
+        .menu-button {
+            font-size: .8rem;
+        }
 
+        .menu-lists {
+            grid-row: 3 / 4;
+        }
+    }
 
+    .tasks-container {
+        padding-top: 2rem;
+    }
+
+    .project-card {
+        height: 20rem;
+        min-width: 10rem;
+        max-width: 10rem;
+
+        .cardHeader h3 {
+            font-size: 1.25rem;
+        }
+
+        .fa-trash-alt:before {
+            font-size: 1.5rem;
+        }
+    }
+
+    .addTaskForm .form-container {
+        width: 15rem;
+
+        h1 {
+            font-size: 1.5rem;
+        }
+    }
+
+    .menuTaskForm .form-container {
+        width: 15rem;
+
+        h1 {
+            font-size: 1.5rem;
+        }
+    }
+
+    .viewTaskForm .form-container {
+        width: 15rem;
+
+        h1 {
+            font-size: 1.5rem;
+        }
+    }
+
+    .createListForm .form-container {
+        margin-left: 0;
+        width: 15rem;
+    }
+}
