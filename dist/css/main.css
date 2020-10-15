@@ -51,7 +51,8 @@ body {
     .menu-container .menu-button.hide {
       display: none; }
   .menu-container .menu-lists {
-    width: 80%; }
+    width: 80%;
+    grid-row: 3 / 4; }
     .menu-container .menu-lists .menuListTitle {
       display: flex;
       justify-content: space-between;

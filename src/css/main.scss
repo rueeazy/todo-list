@@ -71,6 +71,7 @@ body {
 
     .menu-lists {
         width: 80%;
+        grid-row: 3 / 4;
 
         .menuListTitle {
             display: flex;
